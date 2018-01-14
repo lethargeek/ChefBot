@@ -90,7 +90,6 @@ namespace ChefBot
 
                 await Task.Delay(10000);
 
-                //browser.Document.GetElementById("edit_area_toggle_checkbox_edit-program").InvokeMember("Click");
                 browser.Document.GetElementById("edit-program").InnerText = solution;
                 browser.Document.GetElementById("edit-submit").InvokeMember("Click");
             }
@@ -100,7 +99,7 @@ namespace ChefBot
             }
             finally
             {
-                //Wait for 60 seconds before next submission
+                //Wait for 10 seconds before next submission
 
                 await Task.Delay(TimeSpan.FromSeconds(10));
             }
